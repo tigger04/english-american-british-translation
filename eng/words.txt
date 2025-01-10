@@ -1812,7 +1812,6 @@ verbalise	verbalize
 verbalised	verbalized
 verbalises	verbalizes
 verbalising	verbalizing
-vice	vise
 victimisation	victimization
 victimise	victimize
 victimised	victimized
@@ -1843,8 +1842,6 @@ vulgarise	vulgarize
 vulgarised	vulgarized
 vulgarises	vulgarizes
 vulgarising	vulgarizing
-waggon	wagon
-waggons	wagons
 watercolour	watercolor
 watercolours	watercolors
 weaselled	weaseled
@@ -1872,7 +1869,3 @@ worshipper	worshiper
 worshipping	worshiping
 yodelled	yodeled
 yodelling	yodeling
-yoghourt	yogurt
-yoghourts	yogurts
-yoghurt	yogurt
-yoghurts	yogurts
