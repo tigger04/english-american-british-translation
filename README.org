@@ -1,0 +1,30 @@
+#+TITLE: eng: British-American English converter (CLI)
+
+Eng is a CLI tool to translate from American to British English and vice versa.
+
++ For Python it fixes only string literals, docstrings, and comments.
++ For other programming languages it fixes only string literals.
++ For plain text files it fixes all words.
+
+* FORK - Rationale
+Why did I fork this? As u/moononthebones put it so succinctly on [[https://www.reddit.com/r/Python/comments/xlzyi1/eng_translate_british_english_into_american/][reddit]:
+
+#+BEGIN_QUOTE
+*u/moononthebones*
+A lot of these American spellings are also valid British English spellings: Oxford spelling style (preferred by most scientific publications) uses ‘-ize’ endings, so ‘acclimatize’ is a correct British variant. Whereas British English will always use ‘analyse’ rather than ‘analyze’.
+#+END_QUOTE
+
+Oh, and I also changed the readme from Markdown (yuk) to orgmode (yay).
+
+* Installation
+The pypi/pip package references the [[https://github.com/orsinium-labs/eng][original eng project that this is forked from]]
+
+#+BEGIN_SRC sh
+python3 -m pip install --user eng
+#+END_SRC
+
+## Usage
+
+#+BEGIN_SRC sh
+python3 -m eng .
+#+END_SRC
