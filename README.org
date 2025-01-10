@@ -17,14 +17,28 @@ A lot of these American spellings are also valid British English spellings: Oxfo
 Oh, and I also changed the readme from Markdown (yuk) to orgmode (yay).
 
 * Installation
-The pypi/pip package references the [[https://github.com/orsinium-labs/eng][original eng project that this is forked from]]
+The pypi/pip package is for the [[https://github.com/orsinium-labs/eng][original project of this fork]]
 
 #+BEGIN_SRC sh
-python3 -m pip install --user eng
+# python3 -m pip install --user eng
 #+END_SRC
 
 ## Usage
 
+Create a virtual environment and install the dependencies.
+#+BEGIN_SRC sh
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+#+END_SRC
+
+
 #+BEGIN_SRC sh
 python3 -m eng .
+#+END_SRC
+
+## Run tests
+
+#+BEGIN_SRC sh
+pytest tests/test_fixer.py
 #+END_SRC
