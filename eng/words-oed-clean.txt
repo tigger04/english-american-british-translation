@@ -572,7 +572,7 @@ parcelled	parceled
 parcelling	parceling
 parlour	parlor
 parlours	parlors
-pavement	sidewalk
+footpath	sidewalk
 pedalled	pedaled
 pedalling	pedaling
 pencilled	penciled
@@ -713,8 +713,6 @@ squirrelled	squirreled
 squirrelling	squirreling
 stencilled	stenciled
 stencilling	stenciling
-storey	story
-storeys	stories
 succour	succor
 succoured	succored
 succouring	succoring

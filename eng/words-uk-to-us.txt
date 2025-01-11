@@ -206,7 +206,7 @@ carolling	caroling
 case-insensitive	case insensitive
 case-sensitive	case sensitive
 catalogue	catalog
-catalogue	catalog
+catalogue 	catalog
 catalogue.	catalog.
 catalogued	cataloged
 catalogues	catalogs
@@ -453,7 +453,7 @@ digitised	digitized
 digitiser	digitizer
 digitises	digitizes
 digitising	digitizing
-disc	disk
+disc 	disk
 disc-	disk-
 disc,	disk,
 disc;	disk;
@@ -962,9 +962,9 @@ liquidises	liquidizes
 liquidising	liquidizing
 lit	lighted
 litre	liter
-litre	liter
-litre	liter
-litres	liters
+litre 	 liter
+litre 	 liter
+litres 	 liters
 localisation	localization
 localisational	localizational
 localise	localize
@@ -1030,8 +1030,8 @@ metabolise	metabolize
 metabolised	metabolized
 metabolises	metabolizes
 metabolising	metabolizing
-metre	meter
-metres	meters
+metre	 meter
+metres	 meters
 micrometre	micrometer
 micrometres	micrometers
 militarise	militarize
@@ -1234,7 +1234,7 @@ patronised	patronized
 patronises	patronizes
 patronising	patronizing
 patronisingly	patronizingly
-footpath	sidewalk
+footpath sidewalk
 pedalled	pedaled
 pedalling	pedaling
 pedestrianisation	pedestrianization
@@ -1747,8 +1747,8 @@ tyrannise	tyrannize
 tyrannised	tyrannized
 tyrannises	tyrannizes
 tyrannising	tyrannizing
-tyre	tire
-tyres	tires
+tyre	 tire
+tyres	 tires
 unauthorised	unauthorized
 uncategorised	uncategorized
 uncivilised	uncivilized
@@ -1805,7 +1805,6 @@ vectorise	vectorize
 vectorised	vectorized
 vectoriser	vectorizer
 vectorising	vectorizing
-vectorization	vectorisation
 verbalise	verbalize
 verbalised	verbalized
 verbalises	verbalizes

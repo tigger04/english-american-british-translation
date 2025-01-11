@@ -33,24 +33,35 @@ class Target(enum.Enum):
 #     return MappingProxyType(result)
 
 
-@lru_cache(maxsize=2)
-def get_words(target: Target) -> typing.Mapping[str, str]:
-    base_path = Path(__file__).parent
-    # Choose file based on translation direction
-    filename = "words.txt" if target == Target.US else "words-oed-clean.txt"
-    path = base_path / filename
+_UK_TO_US_WORDS: typing.Optional[typing.Mapping[str, str]] = None
+_US_TO_UK_WORDS: typing.Optional[typing.Mapping[str, str]] = None
 
+def _load_words_file(filename: str) -> typing.Mapping[str, str]:
     result = {}
+    path = Path(__file__).parent / filename
     for line in path.open("r", encoding="utf8"):
         line = line.strip()
         if not line:
             continue
-        uk, us = line.split("\t")
-        if target == Target.US:
-            result[uk] = us
-        else:
-            result[us] = uk
+        try:
+            word_from, word_to = line.split("\t")
+            result[word_from] = word_to
+        except ValueError:
+            continue
     return MappingProxyType(result)
+
+def get_words(target: Target) -> typing.Mapping[str, str]:
+    global _UK_TO_US_WORDS, _US_TO_UK_WORDS
+    
+    if target == Target.US:
+        if _UK_TO_US_WORDS is None:
+            _UK_TO_US_WORDS = _load_words_file("words-uk-to-us.txt")
+        return _UK_TO_US_WORDS
+    else:
+        if _US_TO_UK_WORDS is None:
+            _US_TO_UK_WORDS = _load_words_file("words-us-to-uk.txt")
+        return _US_TO_UK_WORDS
+
 
 
 class Fixer:
