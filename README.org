@@ -11,6 +11,10 @@ Why did I fork this? As u/moononthebones put it so succinctly on [[https://www.r
 A lot of these American spellings are also valid British English spellings: Oxford spelling style (preferred by most scientific publications) uses ‘-ize’ endings, so ‘acclimatize’ is a correct British variant. Whereas British English will always use ‘analyse’ rather than ‘analyze’.
 #+END_QUOTE
 
+My guiding principle when communicating is to use language that is clear, accurate and avoids ambiguity where possible. Lofty Cambridge spellings are unnecessary, when Oxford -ize spellings are also valid British English words, but importantly readers of both dialects can understand them.
+
+Cambridge spellings might be interesting and make a statement about one's British English identity, but they are not clear and cause confusion to international audiences.
+
 This fork, when translating American to British English, prefers the [[https://en.wikipedia.org/wiki/Oxford_spelling][Oxford Spelling always]].
 
 *** TODO (Maybe) Add an option to choose between Oxford and Cambridge spelling styles, so that -ize translates to -ise
