@@ -1,7 +1,7 @@
 #+TITLE: eng: British-American English converter (CLI)
 
 Eng is a CLI tool to translate from American to British English and vice versa.
-*with a preference for the [[https://en.wikipedia.org/wiki/Oxford_spellinhttps://en.wikipedia.org/wiki/Oxford_spellingg[Oxford English Dictionary spelling]]*\*
+*with a preference for the [[https://en.wikipedia.org/wiki/Oxford_spellinhttps://en.wikipedia.org/wiki/Oxford_spellingg][Oxford English Dictionary spelling]]*\*
 
 * FORK - Rationale
 Why did I fork this? As u/moononthebones put it so succinctly on [[https://www.reddit.com/r/Python/comments/xlzyi1/eng_translate_british_english_into_american/][reddit]:
