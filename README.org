@@ -70,8 +70,10 @@ Replacing 'Grey' with 'Gray'
 $ 
 #+END_SRC
 
-## Run tests
+** Run tests
 
 #+BEGIN_SRC sh
 pytest tests/test_fixer.py
 #+END_SRC
+
+- TODO needs updating to reflect the changes in the CLI from this for
