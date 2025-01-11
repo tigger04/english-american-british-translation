@@ -1,11 +1,7 @@
 #+TITLE: eng: British-American English converter (CLI)
 
 Eng is a CLI tool to translate from American to British English and vice versa.
-*with a preference for the [https://en.wikipedia.org/wiki/Oxford_spellinhttps://en.wikipedia.org/wiki/Oxford_spellingg[Oxford English Dictionary spelling always]]*\*
-
-+ For Python it fixes only string literals, docstrings, and comments.
-+ For other programming languages it fixes only string literals.
-+ For plain text files it fixes all words.
+*with a preference for the [https://en.wikipedia.org/wiki/Oxford_spellinhttps://en.wikipedia.org/wiki/Oxford_spellingg[Oxford English Dictionary spelling]]*\*
 
 * FORK - Rationale
 Why did I fork this? As u/moononthebones put it so succinctly on [[https://www.reddit.com/r/Python/comments/xlzyi1/eng_translate_british_english_into_american/][reddit]:
@@ -15,7 +11,7 @@ Why did I fork this? As u/moononthebones put it so succinctly on [[https://www.r
 A lot of these American spellings are also valid British English spellings: Oxford spelling style (preferred by most scientific publications) uses ‘-ize’ endings, so ‘acclimatize’ is a correct British variant. Whereas British English will always use ‘analyse’ rather than ‘analyze’.
 #+END_QUOTE
 
-This fork, when translating American to British English, prefers the Oxford Spelling always.
+This fork, when translating American to British English, prefers the [[https://en.wikipedia.org/wiki/Oxford_spelling][Oxford Spelling always]].
 
 *** TODO (Maybe) Add an option to choose between Oxford and Cambridge spelling styles, so that -ize translates to -ise
 Is this really worth bothering to do? If you want the Cambridge spelling, put on your tweed hat, zip up your red trousers and say a small prayer to Nigel Farage and the King, and then use the [[https://www.reddit.com/r/Python/comments/xlzyi1/eng_translate_british_english_into_american/][original project this was forked from]].
