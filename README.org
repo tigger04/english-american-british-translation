@@ -17,7 +17,7 @@ Cambridge spellings might be interesting and make a statement about one's Britis
 
 This fork, when translating American to British English, prefers the [[https://en.wikipedia.org/wiki/Oxford_spelling][Oxford Spelling always]].
 
-*** TODO (Maybe) Add an option to choose between Oxford and Cambridge spelling styles, so that -ize translates to -ise
+*TODO (Maybe) Add an option to choose between Oxford and Cambridge spelling styles, so that -ize translates to -ise*
 Is this really worth bothering to do? If you want the Cambridge spelling, put on your tweed hat, zip up your red trousers and say a small prayer to Nigel Farage and the King, and then use the [[https://www.reddit.com/r/Python/comments/xlzyi1/eng_translate_british_english_into_american/][original project this was forked from]].
 
 Oh, and I also changed the readme from Markdown (yuk) to orgmode (yay).
