@@ -283,6 +283,7 @@ equaled	equalled
 equaling	equalling
 fecal	faecal
 feces	faeces
+faucet	tap
 favor	favour
 favorable	favourable
 favorably	favourably

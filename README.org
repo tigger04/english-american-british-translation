@@ -35,13 +35,42 @@ pip install -r requirements.txt
 #+END_SRC
 
 *** Running the CLI
+Where =-v= / =--verbose= will enumerate the changes and output them to STDERR
+
 #+BEGIN_SRC sh
-python3 -m eng --target uk < input-file.txt > output-file.txt
+$ echo center of the faucet | python -m eng --target uk --verbose
+Replacing 'faucet' with 'tap'
+Replacing 'center' with 'centre'
+centre of the tap
 #+END_SRC
 
+I have changed the CLI class to only accept input via STDIN and output to STDOUT (verbose output to STDERR). The original of this fork would overwrite the input file without warning, which is a nope for me.
+
+To convert files, use the shell's built-in redirection:
 
 #+BEGIN_SRC sh
-python3 -m eng .
+$ python -m eng --target us -v < tests/british-story.txt > tests/british-story-translated.txt
+Replacing 'tranquillity' with 'tranquility'
+Replacing 'pyjamas' with 'pajamas'
+Replacing 'cosy' with 'cozy'
+Replacing 'realised' with 'realized'
+Replacing 'neighbours' with 'neighbors'
+Replacing 'cosiness' with 'coziness'
+Replacing 'moulded' with 'molded'
+Replacing 'favourite' with 'favorite'
+Replacing 'signalled' with 'signaled'
+Replacing 'colour' with 'color'
+Replacing 'parlour' with 'parlor'
+Replacing 'savoured' with 'savored'
+Replacing 'doughnut' with 'donut'
+Replacing 'neighbouring' with 'neighboring'
+Replacing 'marvelling' with 'marveling'
+Replacing 'odour' with 'odor'
+Replacing 'tantalising' with 'tantalizing'
+Replacing 'postman' with 'mailman'
+Replacing 'savouring' with 'savoring'
+Replacing 'Grey' with 'Gray'
+$ 
 #+END_SRC
 
 ## Run tests
