@@ -16,6 +16,12 @@ def main(argv: typing.List[str]) -> int:
         choices=("text", "python", "literal"),
         help="Processing mode for the input",
     )
+    parser.add_argument(
+        "-v",
+        "--verbose",
+        action="store_true",
+        help="Output word substitutions to stderr",
+    )
     args = parser.parse_args(argv)
 
     # Read from STDIN
@@ -34,6 +40,7 @@ def main(argv: typing.List[str]) -> int:
     fixer = fixer_class(
         content=content,
         target=Target(args.target),
+        verbose=args.verbose,  # Pass verbose flag to fixer
     )
     new_content = fixer.apply()
 

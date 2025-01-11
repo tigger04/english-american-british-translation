@@ -1,5 +1,6 @@
 import enum
 import re
+import sys
 import tokenize
 import typing
 from functools import lru_cache
@@ -7,6 +8,7 @@ from pathlib import Path
 from types import MappingProxyType
 
 from ._replacement import Replacement
+
 
 
 REX_STRING = re.compile(r'\"[^"\\]*(?:\\.[^"\\]*)*"')
@@ -38,7 +40,8 @@ _US_TO_UK_WORDS: typing.Optional[typing.Mapping[str, str]] = None
 
 def _load_words_file(filename: str) -> typing.Mapping[str, str]:
     result = {}
-    path = Path(__file__).parent / filename
+    # Go up one level from the module directory to find dictionaries/
+    path = Path(__file__).parent.parent / "dictionaries" / filename
     for line in path.open("r", encoding="utf8"):
         line = line.strip()
         if not line:
@@ -63,33 +66,31 @@ def get_words(target: Target) -> typing.Mapping[str, str]:
         return _US_TO_UK_WORDS
 
 
-
 class Fixer:
-    target: Target
-    content: str
-
-    def __init__(self, *, target: Target = Target.US, content: str) -> None:
-        self.target = target
+    def __init__(
+        self,
+        content: str,
+        target: Target,
+        verbose: bool = False
+    ) -> None:
         self.content = content
+        self.target = target
+        self.verbose = verbose
 
     @property
     def words(self) -> typing.Mapping[str, str]:
         return get_words(target=self.target)
 
-    @property
-    def replacements(self) -> typing.Iterator[Replacement]:
-        raise NotImplementedError
-
     def apply(self) -> str:
+        result = self.content
+        # Sort replacements by length (longest first) to handle overlapping terms
         reps = sorted(self.replacements, reverse=True)
-        lines = self.content.split("\n")
         for rep in reps:
-            line = lines[rep.row]
-            line_before = line[: rep.col]
-            line_after = line[rep.col + len(rep.word_from) :]
-            line = line_before + rep.word_to + line_after
-            lines[rep.row] = line
-        return "\n".join(lines)
+            if rep.word_from in result:
+                if self.verbose:
+                    sys.stderr.write(f"Replacing '{rep.word_from}' with '{rep.word_to}'\n")
+                result = rep.apply(result)
+        return result
 
 
 class PythonFixer(Fixer):

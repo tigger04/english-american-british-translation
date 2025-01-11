@@ -3,7 +3,7 @@ import tokenize
 import typing
 
 
-REX_WORD = re.compile(r'[a-z]{4,}', re.IGNORECASE)
+REX_WORD = re.compile(r"[a-z]{4,}", re.IGNORECASE)
 
 
 class Replacement(typing.NamedTuple):
@@ -12,13 +12,17 @@ class Replacement(typing.NamedTuple):
     word_from: str
     word_to: str
 
+    def apply(self, text: str) -> str:
+        """Apply the replacement to the given text."""
+        return text.replace(self.word_from, self.word_to)
+
     @classmethod
     def from_token(
         cls,
         token: tokenize.TokenInfo,
         words: typing.Mapping[str, str],
-    ) -> typing.Iterator['Replacement']:
-        for row_offset, line in enumerate(token.string.split('\n')):
+    ) -> typing.Iterator["Replacement"]:
+        for row_offset, line in enumerate(token.string.split("\n")):
             col_offset = 0
             if not row_offset:
                 col_offset = token.start[1]
