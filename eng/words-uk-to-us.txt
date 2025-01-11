@@ -75,7 +75,6 @@ anti-aliased	antialiased
 anti-aliasing	antialiasing
 anti-clockwise	counter-clockwise
 anti-clockwise	counterclockwise
-any more	anymore
 apologise	apologize
 apologised	apologized
 apologises	apologizes

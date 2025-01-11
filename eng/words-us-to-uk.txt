@@ -45,7 +45,6 @@ antialiased	anti-aliased
 antialiasing	anti-aliasing
 counter-clockwise	anti-clockwise
 counterclockwise	anti-clockwise
-anymore	any more
 appall	appal
 appalls	appals
 arbor	arbour
